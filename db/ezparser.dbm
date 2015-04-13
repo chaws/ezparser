@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+CAUTION: Do not modify this file unless you know what you are doing.
+         Unexpected results may occur if the code is changed deliberately.
+-->
+<dbmodel pgmodeler-ver="0.7.1">
+<role name="ezuser">
+</role>
+
+<database name="ezparser_projectname">
+	<role name="ezuser"/>
+</database>
+
+<schema name="public" protected="true" fill-color="#e1e1e1" sql-disabled="true">
+</schema>
+
+<table name="identifier_declaration">
+	<schema name="public"/>
+	<role name="ezuser"/>
+	<comment><![CDATA[Stores variables names]]></comment>
+	<position x="163.182" y="125.182"/>
+	<column name="identifier_id" not-null="true">
+		<type name="serial"/>
+	</column>
+	<column name="name">
+		<type name="character varying" length="255"/>
+	</column>
+	<column name="line">
+		<type name="integer"/>
+	</column>
+	<column name="_column">
+		<type name="integer"/>
+	</column>
+	<column name="scope">
+		<type name="integer"/>
+	</column>
+	<column name="static">
+		<type name="bool"/>
+	</column>
+	<column name="extern">
+		<type name="bool"/>
+	</column>
+	<column name="function">
+		<type name="bool"/>
+	</column>
+	<column name="num_pointers">
+		<type name="integer"/>
+	</column>
+	<column name="num_braces">
+		<type name="integer"/>
+	</column>
+	<constraint name="identifiers_pkey" type="pk-constr" factor="10" table="public.identifier_declaration">
+		<columns names="identifier_id" ref-type="src-columns"/>
+	</constraint>
+</table>
+
+<table name="files">
+	<schema name="public"/>
+	<role name="ezuser"/>
+	<position x="776.273" y="81.5455"/>
+	<column name="file_id" not-null="true">
+		<type name="serial"/>
+	</column>
+	<column name="name">
+		<type name="character varying"/>
+	</column>
+	<constraint name="files_pkey" type="pk-constr" factor="10" table="public.files">
+		<columns names="file_id" ref-type="src-columns"/>
+	</constraint>
+</table>
+
+<relationship name="files_has_many_itendifiers" type="rel1n"
+	 src-col-pattern="{sc}_{st}"
+	 pk-pattern="{dt}_pk" uq-pattern="{dt}_uq"
+	 src-fk-pattern="{st}_fk"
+	 col-indexes="10" constr-indexes="1"
+	 src-table="public.files"
+	 dst-table="public.identifier_declaration"
+	 src-required="true" dst-required="false"
+	del-action="RESTRICT"/>
+
+<table name="types">
+	<schema name="public"/>
+	<role name="ezuser"/>
+	<position x="584" y="399"/>
+	<column name="type_id" not-null="true">
+		<type name="serial"/>
+	</column>
+	<column name="name">
+		<type name="character varying"/>
+	</column>
+	<column name="user_defined">
+		<type name="bool"/>
+	</column>
+	<constraint name="types_pkey" type="pk-constr" factor="100" table="public.types">
+		<columns names="type_id" ref-type="src-columns"/>
+	</constraint>
+</table>
+
+<relationship name="types_has_many_itendifiers" type="rel1n"
+	 src-col-pattern="{sc}_{st}"
+	 pk-pattern="{dt}_pk" uq-pattern="{dt}_uq"
+	 src-fk-pattern="{st}_fk"
+	 col-indexes="11" constr-indexes="2"
+	 src-table="public.types"
+	 dst-table="public.identifier_declaration"
+	 src-required="false" dst-required="false"
+	del-action="RESTRICT"/>
+
+</dbmodel>

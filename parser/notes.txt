@@ -1,0 +1,17 @@
+I'm creating this file to keep track of this I do in this
+source files
+
+**** May 5 2014 ****
+- I just thought about creating a separated
+makefile for every subdir of src. I think that's 
+gonna make things easier to compile
+
+- Also, I created 'obj' folder for each subdir of src
+I guess things will me more organized
+
+- For crules directory, thigs get a little bit more complex
+I'm creating a dir for every crules subfolder
+
+- The main make is responsible for gathering the modules' 
+statics libs and put bison/flex files together
+

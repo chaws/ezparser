@@ -1,0 +1,1166 @@
+array(77) {
+  [0]=>
+  array(2) {
+    ["name"]=>
+    string(18) "primary_expression"
+    ["subrules"]=>
+    array(5) {
+      [0]=>
+      string(10) "IDENTIFIER"
+      [1]=>
+      string(8) "constant"
+      [2]=>
+      string(6) "string"
+      [3]=>
+      string(16) "LP expression RP"
+      [4]=>
+      string(17) "generic_selection"
+    }
+  }
+  [1]=>
+  array(2) {
+    ["name"]=>
+    string(8) "constant"
+    ["subrules"]=>
+    array(3) {
+      [0]=>
+      string(10) "I_CONSTANT"
+      [1]=>
+      string(10) "F_CONSTANT"
+      [2]=>
+      string(20) "ENUMERATION_CONSTANT"
+    }
+  }
+  [2]=>
+  array(2) {
+    ["name"]=>
+    string(20) "enumeration_constant"
+    ["subrules"]=>
+    array(1) {
+      [0]=>
+      string(10) "IDENTIFIER"
+    }
+  }
+  [3]=>
+  array(2) {
+    ["name"]=>
+    string(6) "string"
+    ["subrules"]=>
+    array(2) {
+      [0]=>
+      string(14) "STRING_LITERAL"
+      [1]=>
+      string(9) "FUNC_NAME"
+    }
+  }
+  [4]=>
+  array(2) {
+    ["name"]=>
+    string(17) "generic_selection"
+    ["subrules"]=>
+    array(1) {
+      [0]=>
+      string(60) "GENERIC LP assignment_expression COMMA generic_assoc_list RP"
+    }
+  }
+  [5]=>
+  array(2) {
+    ["name"]=>
+    string(18) "generic_assoc_list"
+    ["subrules"]=>
+    array(2) {
+      [0]=>
+      string(19) "generic_association"
+      [1]=>
+      string(44) "generic_assoc_list COMMA generic_association"
+    }
+  }
+  [6]=>
+  array(2) {
+    ["name"]=>
+    string(19) "generic_association"
+    ["subrules"]=>
+    array(2) {
+      [0]=>
+      string(37) "type_name COLON assignment_expression"
+      [1]=>
+      string(35) "DEFAULT COLON assignment_expression"
+    }
+  }
+  [7]=>
+  array(2) {
+    ["name"]=>
+    string(18) "postfix_expression"
+    ["subrules"]=>
+    array(10) {
+      [0]=>
+      string(18) "primary_expression"
+      [1]=>
+      string(37) "postfix_expression LSB expression RSB"
+      [2]=>
+      string(24) "postfix_expression LP RP"
+      [3]=>
+      string(49) "postfix_expression LP argument_expression_list RP"
+      [4]=>
+      string(33) "postfix_expression DOT IDENTIFIER"
+      [5]=>
+      string(36) "postfix_expression PTR_OP IDENTIFIER"
+      [6]=>
+      string(25) "postfix_expression INC_OP"
+      [7]=>
+      string(25) "postfix_expression DEC_OP"
+      [8]=>
+      string(40) "LP type_name RP LCB initializer_list RCB"
+      [9]=>
+      string(46) "LP type_name RP LCB initializer_list COMMA RCB"
+    }
+  }
+  [8]=>
+  array(2) {
+    ["name"]=>
+    string(24) "argument_expression_list"
+    ["subrules"]=>
+    array(2) {
+      [0]=>
+      string(21) "assignment_expression"
+      [1]=>
+      string(52) "argument_expression_list COMMA assignment_expression"
+    }
+  }
+  [9]=>
+  array(2) {
+    ["name"]=>
+    string(16) "unary_expression"
+    ["subrules"]=>
+    array(7) {
+      [0]=>
+      string(18) "postfix_expression"
+      [1]=>
+      string(23) "INC_OP unary_expression"
+      [2]=>
+      string(23) "DEC_OP unary_expression"
+      [3]=>
+      string(30) "unary_operator cast_expression"
+      [4]=>
+      string(23) "SIZEOF unary_expression"
+      [5]=>
+      string(22) "SIZEOF LP type_name RP"
+      [6]=>
+      string(23) "ALIGNOF LP type_name RP"
+    }
+  }
+  [10]=>
+  array(2) {
+    ["name"]=>
+    string(14) "unary_operator"
+    ["subrules"]=>
+    array(6) {
+      [0]=>
+      string(3) "AMP"
+      [1]=>
+      string(4) "MULT"
+      [2]=>
+      string(4) "PLUS"
+      [3]=>
+      string(5) "MINUS"
+      [4]=>
+      string(5) "TILDE"
+      [5]=>
+      string(3) "EXM"
+    }
+  }
+  [11]=>
+  array(2) {
+    ["name"]=>
+    string(15) "cast_expression"
+    ["subrules"]=>
+    array(2) {
+      [0]=>
+      string(16) "unary_expression"
+      [1]=>
+      string(31) "LP type_name RP cast_expression"
+    }
+  }
+  [12]=>
+  array(2) {
+    ["name"]=>
+    string(25) "multiplicative_expression"
+    ["subrules"]=>
+    array(4) {
+      [0]=>
+      string(15) "cast_expression"
+      [1]=>
+      string(46) "multiplicative_expression MULT cast_expression"
+      [2]=>
+      string(45) "multiplicative_expression DIV cast_expression"
+      [3]=>
+      string(45) "multiplicative_expression MOD cast_expression"
+    }
+  }
+  [13]=>
+  array(2) {
+    ["name"]=>
+    string(19) "additive_expression"
+    ["subrules"]=>
+    array(3) {
+      [0]=>
+      string(25) "multiplicative_expression"
+      [1]=>
+      string(50) "additive_expression PLUS multiplicative_expression"
+      [2]=>
+      string(51) "additive_expression MINUS multiplicative_expression"
+    }
+  }
+  [14]=>
+  array(2) {
+    ["name"]=>
+    string(16) "shift_expression"
+    ["subrules"]=>
+    array(3) {
+      [0]=>
+      string(19) "additive_expression"
+      [1]=>
+      string(44) "shift_expression LEFT_OP additive_expression"
+      [2]=>
+      string(45) "shift_expression RIGHT_OP additive_expression"
+    }
+  }
+  [15]=>
+  array(2) {
+    ["name"]=>
+    string(21) "relational_expression"
+    ["subrules"]=>
+    array(5) {
+      [0]=>
+      string(16) "shift_expression"
+      [1]=>
+      string(41) "relational_expression LT shift_expression"
+      [2]=>
+      string(41) "relational_expression GT shift_expression"
+      [3]=>
+      string(44) "relational_expression LE_OP shift_expression"
+      [4]=>
+      string(44) "relational_expression GE_OP shift_expression"
+    }
+  }
+  [16]=>
+  array(2) {
+    ["name"]=>
+    string(19) "equality_expression"
+    ["subrules"]=>
+    array(3) {
+      [0]=>
+      string(21) "relational_expression"
+      [1]=>
+      string(47) "equality_expression EQ_OP relational_expression"
+      [2]=>
+      string(47) "equality_expression NE_OP relational_expression"
+    }
+  }
+  [17]=>
+  array(2) {
+    ["name"]=>
+    string(14) "and_expression"
+    ["subrules"]=>
+    array(2) {
+      [0]=>
+      string(19) "equality_expression"
+      [1]=>
+      string(38) "and_expression AMP equality_expression"
+    }
+  }
+  [18]=>
+  array(2) {
+    ["name"]=>
+    string(23) "exclusive_or_expression"
+    ["subrules"]=>
+    array(2) {
+      [0]=>
+      string(14) "and_expression"
+      [1]=>
+      string(42) "exclusive_or_expression XOR and_expression"
+    }
+  }
+  [19]=>
+  array(2) {
+    ["name"]=>
+    string(23) "inclusive_or_expression"
+    ["subrules"]=>
+    array(2) {
+      [0]=>
+      string(23) "exclusive_or_expression"
+      [1]=>
+      string(50) "inclusive_or_expression OR exclusive_or_expression"
+    }
+  }
+  [20]=>
+  array(2) {
+    ["name"]=>
+    string(22) "logical_and_expression"
+    ["subrules"]=>
+    array(2) {
+      [0]=>
+      string(23) "inclusive_or_expression"
+      [1]=>
+      string(53) "logical_and_expression AND_OP inclusive_or_expression"
+    }
+  }
+  [21]=>
+  array(2) {
+    ["name"]=>
+    string(21) "logical_or_expression"
+    ["subrules"]=>
+    array(2) {
+      [0]=>
+      string(22) "logical_and_expression"
+      [1]=>
+      string(50) "logical_or_expression OR_OP logical_and_expression"
+    }
+  }
+  [22]=>
+  array(2) {
+    ["name"]=>
+    string(22) "conditional_expression"
+    ["subrules"]=>
+    array(2) {
+      [0]=>
+      string(21) "logical_or_expression"
+      [1]=>
+      string(65) "logical_or_expression QUM expression COLON conditional_expression"
+    }
+  }
+  [23]=>
+  array(2) {
+    ["name"]=>
+    string(21) "assignment_expression"
+    ["subrules"]=>
+    array(2) {
+      [0]=>
+      string(22) "conditional_expression"
+      [1]=>
+      string(58) "unary_expression assignment_operator assignment_expression"
+    }
+  }
+  [24]=>
+  array(2) {
+    ["name"]=>
+    string(19) "assignment_operator"
+    ["subrules"]=>
+    array(11) {
+      [0]=>
+      string(2) "EQ"
+      [1]=>
+      string(10) "MUL_ASSIGN"
+      [2]=>
+      string(10) "DIV_ASSIGN"
+      [3]=>
+      string(10) "MOD_ASSIGN"
+      [4]=>
+      string(10) "ADD_ASSIGN"
+      [5]=>
+      string(10) "SUB_ASSIGN"
+      [6]=>
+      string(11) "LEFT_ASSIGN"
+      [7]=>
+      string(12) "RIGHT_ASSIGN"
+      [8]=>
+      string(10) "AND_ASSIGN"
+      [9]=>
+      string(10) "XOR_ASSIGN"
+      [10]=>
+      string(9) "OR_ASSIGN"
+    }
+  }
+  [25]=>
+  array(2) {
+    ["name"]=>
+    string(10) "expression"
+    ["subrules"]=>
+    array(2) {
+      [0]=>
+      string(21) "assignment_expression"
+      [1]=>
+      string(38) "expression COMMA assignment_expression"
+    }
+  }
+  [26]=>
+  array(2) {
+    ["name"]=>
+    string(19) "constant_expression"
+    ["subrules"]=>
+    array(1) {
+      [0]=>
+      string(22) "conditional_expression"
+    }
+  }
+  [27]=>
+  array(2) {
+    ["name"]=>
+    string(11) "declaration"
+    ["subrules"]=>
+    array(3) {
+      [0]=>
+      string(29) "declaration_specifiers SCOLON"
+      [1]=>
+      string(50) "declaration_specifiers init_declarator_list SCOLON"
+      [2]=>
+      string(25) "static_assert_declaration"
+    }
+  }
+  [28]=>
+  array(2) {
+    ["name"]=>
+    string(22) "declaration_specifiers"
+    ["subrules"]=>
+    array(10) {
+      [0]=>
+      string(46) "storage_class_specifier declaration_specifiers"
+      [1]=>
+      string(23) "storage_class_specifier"
+      [2]=>
+      string(37) "type_specifier declaration_specifiers"
+      [3]=>
+      string(14) "type_specifier"
+      [4]=>
+      string(37) "type_qualifier declaration_specifiers"
+      [5]=>
+      string(14) "type_qualifier"
+      [6]=>
+      string(41) "function_specifier declaration_specifiers"
+      [7]=>
+      string(18) "function_specifier"
+      [8]=>
+      string(42) "alignment_specifier declaration_specifiers"
+      [9]=>
+      string(19) "alignment_specifier"
+    }
+  }
+  [29]=>
+  array(2) {
+    ["name"]=>
+    string(20) "init_declarator_list"
+    ["subrules"]=>
+    array(2) {
+      [0]=>
+      string(15) "init_declarator"
+      [1]=>
+      string(42) "init_declarator_list COMMA init_declarator"
+    }
+  }
+  [30]=>
+  array(2) {
+    ["name"]=>
+    string(15) "init_declarator"
+    ["subrules"]=>
+    array(2) {
+      [0]=>
+      string(25) "declarator EQ initializer"
+      [1]=>
+      string(10) "declarator"
+    }
+  }
+  [31]=>
+  array(2) {
+    ["name"]=>
+    string(23) "storage_class_specifier"
+    ["subrules"]=>
+    array(6) {
+      [0]=>
+      string(7) "TYPEDEF"
+      [1]=>
+      string(6) "EXTERN"
+      [2]=>
+      string(6) "STATIC"
+      [3]=>
+      string(12) "THREAD_LOCAL"
+      [4]=>
+      string(4) "AUTO"
+      [5]=>
+      string(8) "REGISTER"
+    }
+  }
+  [32]=>
+  array(2) {
+    ["name"]=>
+    string(14) "type_specifier"
+    ["subrules"]=>
+    array(16) {
+      [0]=>
+      string(4) "VOID"
+      [1]=>
+      string(4) "CHAR"
+      [2]=>
+      string(5) "SHORT"
+      [3]=>
+      string(3) "INT"
+      [4]=>
+      string(4) "LONG"
+      [5]=>
+      string(5) "FLOAT"
+      [6]=>
+      string(6) "DOUBLE"
+      [7]=>
+      string(6) "SIGNED"
+      [8]=>
+      string(8) "UNSIGNED"
+      [9]=>
+      string(4) "BOOL"
+      [10]=>
+      string(7) "COMPLEX"
+      [11]=>
+      string(9) "IMAGINARY"
+      [12]=>
+      string(21) "atomic_type_specifier"
+      [13]=>
+      string(25) "struct_or_union_specifier"
+      [14]=>
+      string(14) "enum_specifier"
+      [15]=>
+      string(12) "TYPEDEF_NAME"
+    }
+  }
+  [33]=>
+  array(2) {
+    ["name"]=>
+    string(25) "struct_or_union_specifier"
+    ["subrules"]=>
+    array(3) {
+      [0]=>
+      string(47) "struct_or_union LCB struct_declaration_list RCB"
+      [1]=>
+      string(58) "struct_or_union IDENTIFIER LCB struct_declaration_list RCB"
+      [2]=>
+      string(26) "struct_or_union IDENTIFIER"
+    }
+  }
+  [34]=>
+  array(2) {
+    ["name"]=>
+    string(15) "struct_or_union"
+    ["subrules"]=>
+    array(2) {
+      [0]=>
+      string(6) "STRUCT"
+      [1]=>
+      string(5) "UNION"
+    }
+  }
+  [35]=>
+  array(2) {
+    ["name"]=>
+    string(23) "struct_declaration_list"
+    ["subrules"]=>
+    array(2) {
+      [0]=>
+      string(18) "struct_declaration"
+      [1]=>
+      string(42) "struct_declaration_list struct_declaration"
+    }
+  }
+  [36]=>
+  array(2) {
+    ["name"]=>
+    string(18) "struct_declaration"
+    ["subrules"]=>
+    array(3) {
+      [0]=>
+      string(31) "specifier_qualifier_list SCOLON"
+      [1]=>
+      string(54) "specifier_qualifier_list struct_declarator_list SCOLON"
+      [2]=>
+      string(25) "static_assert_declaration"
+    }
+  }
+  [37]=>
+  array(2) {
+    ["name"]=>
+    string(24) "specifier_qualifier_list"
+    ["subrules"]=>
+    array(4) {
+      [0]=>
+      string(39) "type_specifier specifier_qualifier_list"
+      [1]=>
+      string(14) "type_specifier"
+      [2]=>
+      string(39) "type_qualifier specifier_qualifier_list"
+      [3]=>
+      string(14) "type_qualifier"
+    }
+  }
+  [38]=>
+  array(2) {
+    ["name"]=>
+    string(22) "struct_declarator_list"
+    ["subrules"]=>
+    array(2) {
+      [0]=>
+      string(17) "struct_declarator"
+      [1]=>
+      string(46) "struct_declarator_list COMMA struct_declarator"
+    }
+  }
+  [39]=>
+  array(2) {
+    ["name"]=>
+    string(17) "struct_declarator"
+    ["subrules"]=>
+    array(3) {
+      [0]=>
+      string(25) "COLON constant_expression"
+      [1]=>
+      string(36) "declarator COLON constant_expression"
+      [2]=>
+      string(10) "declarator"
+    }
+  }
+  [40]=>
+  array(2) {
+    ["name"]=>
+    string(14) "enum_specifier"
+    ["subrules"]=>
+    array(5) {
+      [0]=>
+      string(28) "ENUM LCB enumerator_list RCB"
+      [1]=>
+      string(34) "ENUM LCB enumerator_list COMMA RCB"
+      [2]=>
+      string(39) "ENUM IDENTIFIER LCB enumerator_list RCB"
+      [3]=>
+      string(45) "ENUM IDENTIFIER LCB enumerator_list COMMA RCB"
+      [4]=>
+      string(15) "ENUM IDENTIFIER"
+    }
+  }
+  [41]=>
+  array(2) {
+    ["name"]=>
+    string(15) "enumerator_list"
+    ["subrules"]=>
+    array(2) {
+      [0]=>
+      string(10) "enumerator"
+      [1]=>
+      string(32) "enumerator_list COMMA enumerator"
+    }
+  }
+  [42]=>
+  array(2) {
+    ["name"]=>
+    string(10) "enumerator"
+    ["subrules"]=>
+    array(2) {
+      [0]=>
+      string(43) "enumeration_constant EQ constant_expression"
+      [1]=>
+      string(20) "enumeration_constant"
+    }
+  }
+  [43]=>
+  array(2) {
+    ["name"]=>
+    string(21) "atomic_type_specifier"
+    ["subrules"]=>
+    array(1) {
+      [0]=>
+      string(22) "ATOMIC LP type_name RP"
+    }
+  }
+  [44]=>
+  array(2) {
+    ["name"]=>
+    string(14) "type_qualifier"
+    ["subrules"]=>
+    array(4) {
+      [0]=>
+      string(5) "CONST"
+      [1]=>
+      string(8) "RESTRICT"
+      [2]=>
+      string(8) "VOLATILE"
+      [3]=>
+      string(6) "ATOMIC"
+    }
+  }
+  [45]=>
+  array(2) {
+    ["name"]=>
+    string(18) "function_specifier"
+    ["subrules"]=>
+    array(2) {
+      [0]=>
+      string(6) "INLINE"
+      [1]=>
+      string(8) "NORETURN"
+    }
+  }
+  [46]=>
+  array(2) {
+    ["name"]=>
+    string(19) "alignment_specifier"
+    ["subrules"]=>
+    array(2) {
+      [0]=>
+      string(23) "ALIGNAS LP type_name RP"
+      [1]=>
+      string(33) "ALIGNAS LP constant_expression RP"
+    }
+  }
+  [47]=>
+  array(2) {
+    ["name"]=>
+    string(10) "declarator"
+    ["subrules"]=>
+    array(2) {
+      [0]=>
+      string(25) "pointer direct_declarator"
+      [1]=>
+      string(17) "direct_declarator"
+    }
+  }
+  [48]=>
+  array(2) {
+    ["name"]=>
+    string(17) "direct_declarator"
+    ["subrules"]=>
+    array(14) {
+      [0]=>
+      string(10) "IDENTIFIER"
+      [1]=>
+      string(16) "LP declarator RP"
+      [2]=>
+      string(25) "direct_declarator LSB RSB"
+      [3]=>
+      string(30) "direct_declarator LSB MULT RSB"
+      [4]=>
+      string(74) "direct_declarator LSB STATIC type_qualifier_list assignment_expression RSB"
+      [5]=>
+      string(54) "direct_declarator LSB STATIC assignment_expression RSB"
+      [6]=>
+      string(50) "direct_declarator LSB type_qualifier_list MULT RSB"
+      [7]=>
+      string(74) "direct_declarator LSB type_qualifier_list STATIC assignment_expression RSB"
+      [8]=>
+      string(67) "direct_declarator LSB type_qualifier_list assignment_expression RSB"
+      [9]=>
+      string(45) "direct_declarator LSB type_qualifier_list RSB"
+      [10]=>
+      string(47) "direct_declarator LSB assignment_expression RSB"
+      [11]=>
+      string(43) "direct_declarator LP parameter_type_list RP"
+      [12]=>
+      string(23) "direct_declarator LP RP"
+      [13]=>
+      string(39) "direct_declarator LP identifier_list RP"
+    }
+  }
+  [49]=>
+  array(2) {
+    ["name"]=>
+    string(7) "pointer"
+    ["subrules"]=>
+    array(4) {
+      [0]=>
+      string(32) "MULT type_qualifier_list pointer"
+      [1]=>
+      string(24) "MULT type_qualifier_list"
+      [2]=>
+      string(12) "MULT pointer"
+      [3]=>
+      string(4) "MULT"
+    }
+  }
+  [50]=>
+  array(2) {
+    ["name"]=>
+    string(19) "type_qualifier_list"
+    ["subrules"]=>
+    array(2) {
+      [0]=>
+      string(14) "type_qualifier"
+      [1]=>
+      string(34) "type_qualifier_list type_qualifier"
+    }
+  }
+  [51]=>
+  array(2) {
+    ["name"]=>
+    string(19) "parameter_type_list"
+    ["subrules"]=>
+    array(2) {
+      [0]=>
+      string(29) "parameter_list COMMA ELLIPSIS"
+      [1]=>
+      string(14) "parameter_list"
+    }
+  }
+  [52]=>
+  array(2) {
+    ["name"]=>
+    string(14) "parameter_list"
+    ["subrules"]=>
+    array(2) {
+      [0]=>
+      string(21) "parameter_declaration"
+      [1]=>
+      string(42) "parameter_list COMMA parameter_declaration"
+    }
+  }
+  [53]=>
+  array(2) {
+    ["name"]=>
+    string(21) "parameter_declaration"
+    ["subrules"]=>
+    array(3) {
+      [0]=>
+      string(33) "declaration_specifiers declarator"
+      [1]=>
+      string(42) "declaration_specifiers abstract_declarator"
+      [2]=>
+      string(22) "declaration_specifiers"
+    }
+  }
+  [54]=>
+  array(2) {
+    ["name"]=>
+    string(15) "identifier_list"
+    ["subrules"]=>
+    array(2) {
+      [0]=>
+      string(10) "IDENTIFIER"
+      [1]=>
+      string(32) "identifier_list COMMA IDENTIFIER"
+    }
+  }
+  [55]=>
+  array(2) {
+    ["name"]=>
+    string(9) "type_name"
+    ["subrules"]=>
+    array(2) {
+      [0]=>
+      string(44) "specifier_qualifier_list abstract_declarator"
+      [1]=>
+      string(24) "specifier_qualifier_list"
+    }
+  }
+  [56]=>
+  array(2) {
+    ["name"]=>
+    string(19) "abstract_declarator"
+    ["subrules"]=>
+    array(3) {
+      [0]=>
+      string(34) "pointer direct_abstract_declarator"
+      [1]=>
+      string(7) "pointer"
+      [2]=>
+      string(26) "direct_abstract_declarator"
+    }
+  }
+  [57]=>
+  array(2) {
+    ["name"]=>
+    string(26) "direct_abstract_declarator"
+    ["subrules"]=>
+    array(21) {
+      [0]=>
+      string(25) "LP abstract_declarator RP"
+      [1]=>
+      string(7) "LSB RSB"
+      [2]=>
+      string(12) "LSB MULT RSB"
+      [3]=>
+      string(56) "LSB STATIC type_qualifier_list assignment_expression RSB"
+      [4]=>
+      string(36) "LSB STATIC assignment_expression RSB"
+      [5]=>
+      string(56) "LSB type_qualifier_list STATIC assignment_expression RSB"
+      [6]=>
+      string(49) "LSB type_qualifier_list assignment_expression RSB"
+      [7]=>
+      string(27) "LSB type_qualifier_list RSB"
+      [8]=>
+      string(29) "LSB assignment_expression RSB"
+      [9]=>
+      string(34) "direct_abstract_declarator LSB RSB"
+      [10]=>
+      string(39) "direct_abstract_declarator LSB MULT RSB"
+      [11]=>
+      string(83) "direct_abstract_declarator LSB STATIC type_qualifier_list assignment_expression RSB"
+      [12]=>
+      string(63) "direct_abstract_declarator LSB STATIC assignment_expression RSB"
+      [13]=>
+      string(76) "direct_abstract_declarator LSB type_qualifier_list assignment_expression RSB"
+      [14]=>
+      string(83) "direct_abstract_declarator LSB type_qualifier_list STATIC assignment_expression RSB"
+      [15]=>
+      string(54) "direct_abstract_declarator LSB type_qualifier_list RSB"
+      [16]=>
+      string(56) "direct_abstract_declarator LSB assignment_expression RSB"
+      [17]=>
+      string(5) "LP RP"
+      [18]=>
+      string(25) "LP parameter_type_list RP"
+      [19]=>
+      string(32) "direct_abstract_declarator LP RP"
+      [20]=>
+      string(52) "direct_abstract_declarator LP parameter_type_list RP"
+    }
+  }
+  [58]=>
+  array(2) {
+    ["name"]=>
+    string(11) "initializer"
+    ["subrules"]=>
+    array(3) {
+      [0]=>
+      string(24) "LCB initializer_list RCB"
+      [1]=>
+      string(30) "LCB initializer_list COMMA RCB"
+      [2]=>
+      string(21) "assignment_expression"
+    }
+  }
+  [59]=>
+  array(2) {
+    ["name"]=>
+    string(16) "initializer_list"
+    ["subrules"]=>
+    array(4) {
+      [0]=>
+      string(23) "designation initializer"
+      [1]=>
+      string(11) "initializer"
+      [2]=>
+      string(46) "initializer_list COMMA designation initializer"
+      [3]=>
+      string(34) "initializer_list COMMA initializer"
+    }
+  }
+  [60]=>
+  array(2) {
+    ["name"]=>
+    string(11) "designation"
+    ["subrules"]=>
+    array(1) {
+      [0]=>
+      string(18) "designator_list EQ"
+    }
+  }
+  [61]=>
+  array(2) {
+    ["name"]=>
+    string(15) "designator_list"
+    ["subrules"]=>
+    array(2) {
+      [0]=>
+      string(10) "designator"
+      [1]=>
+      string(26) "designator_list designator"
+    }
+  }
+  [62]=>
+  array(2) {
+    ["name"]=>
+    string(10) "designator"
+    ["subrules"]=>
+    array(2) {
+      [0]=>
+      string(27) "LSB constant_expression RSB"
+      [1]=>
+      string(14) "DOT IDENTIFIER"
+    }
+  }
+  [63]=>
+  array(2) {
+    ["name"]=>
+    string(25) "static_assert_declaration"
+    ["subrules"]=>
+    array(1) {
+      [0]=>
+      string(67) "STATIC_ASSERT LP constant_expression COMMA STRING_LITERAL RP SCOLON"
+    }
+  }
+  [64]=>
+  array(2) {
+    ["name"]=>
+    string(9) "statement"
+    ["subrules"]=>
+    array(6) {
+      [0]=>
+      string(17) "labeled_statement"
+      [1]=>
+      string(18) "compound_statement"
+      [2]=>
+      string(20) "expression_statement"
+      [3]=>
+      string(19) "selection_statement"
+      [4]=>
+      string(19) "iteration_statement"
+      [5]=>
+      string(14) "jump_statement"
+    }
+  }
+  [65]=>
+  array(2) {
+    ["name"]=>
+    string(17) "labeled_statement"
+    ["subrules"]=>
+    array(3) {
+      [0]=>
+      string(26) "IDENTIFIER COLON statement"
+      [1]=>
+      string(40) "CASE constant_expression COLON statement"
+      [2]=>
+      string(23) "DEFAULT COLON statement"
+    }
+  }
+  [66]=>
+  array(2) {
+    ["name"]=>
+    string(18) "compound_statement"
+    ["subrules"]=>
+    array(2) {
+      [0]=>
+      string(7) "LCB RCB"
+      [1]=>
+      string(24) "LCB  block_item_list RCB"
+    }
+  }
+  [67]=>
+  array(2) {
+    ["name"]=>
+    string(15) "block_item_list"
+    ["subrules"]=>
+    array(2) {
+      [0]=>
+      string(10) "block_item"
+      [1]=>
+      string(26) "block_item_list block_item"
+    }
+  }
+  [68]=>
+  array(2) {
+    ["name"]=>
+    string(10) "block_item"
+    ["subrules"]=>
+    array(2) {
+      [0]=>
+      string(11) "declaration"
+      [1]=>
+      string(9) "statement"
+    }
+  }
+  [69]=>
+  array(2) {
+    ["name"]=>
+    string(20) "expression_statement"
+    ["subrules"]=>
+    array(2) {
+      [0]=>
+      string(6) "SCOLON"
+      [1]=>
+      string(17) "expression SCOLON"
+    }
+  }
+  [70]=>
+  array(2) {
+    ["name"]=>
+    string(19) "selection_statement"
+    ["subrules"]=>
+    array(3) {
+      [0]=>
+      string(44) "IF LP expression RP statement ELSE statement"
+      [1]=>
+      string(29) "IF LP expression RP statement"
+      [2]=>
+      string(33) "SWITCH LP expression RP statement"
+    }
+  }
+  [71]=>
+  array(2) {
+    ["name"]=>
+    string(19) "iteration_statement"
+    ["subrules"]=>
+    array(6) {
+      [0]=>
+      string(32) "WHILE LP expression RP statement"
+      [1]=>
+      string(42) "DO statement WHILE LP expression RP SCOLON"
+      [2]=>
+      string(61) "FOR LP expression_statement expression_statement RP statement"
+      [3]=>
+      string(72) "FOR LP expression_statement expression_statement expression RP statement"
+      [4]=>
+      string(52) "FOR LP declaration expression_statement RP statement"
+      [5]=>
+      string(63) "FOR LP declaration expression_statement expression RP statement"
+    }
+  }
+  [72]=>
+  array(2) {
+    ["name"]=>
+    string(14) "jump_statement"
+    ["subrules"]=>
+    array(5) {
+      [0]=>
+      string(22) "GOTO IDENTIFIER SCOLON"
+      [1]=>
+      string(15) "CONTINUE SCOLON"
+      [2]=>
+      string(12) "BREAK SCOLON"
+      [3]=>
+      string(13) "RETURN SCOLON"
+      [4]=>
+      string(24) "RETURN expression SCOLON"
+    }
+  }
+  [73]=>
+  array(2) {
+    ["name"]=>
+    string(16) "translation_unit"
+    ["subrules"]=>
+    array(2) {
+      [0]=>
+      string(20) "external_declaration"
+      [1]=>
+      string(37) "translation_unit external_declaration"
+    }
+  }
+  [74]=>
+  array(2) {
+    ["name"]=>
+    string(20) "external_declaration"
+    ["subrules"]=>
+    array(2) {
+      [0]=>
+      string(19) "function_definition"
+      [1]=>
+      string(11) "declaration"
+    }
+  }
+  [75]=>
+  array(2) {
+    ["name"]=>
+    string(19) "function_definition"
+    ["subrules"]=>
+    array(2) {
+      [0]=>
+      string(69) "declaration_specifiers declarator declaration_list compound_statement"
+      [1]=>
+      string(52) "declaration_specifiers declarator compound_statement"
+    }
+  }
+  [76]=>
+  array(2) {
+    ["name"]=>
+    string(16) "declaration_list"
+    ["subrules"]=>
+    array(2) {
+      [0]=>
+      string(11) "declaration"
+      [1]=>
+      string(28) "declaration_list declaration"
+    }
+  }
+}
